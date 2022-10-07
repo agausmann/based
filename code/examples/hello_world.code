@@ -1,0 +1,3 @@
+func main(output: Stdout) {
+    output.write("Hello World!\n");
+}
