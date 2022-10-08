@@ -9,6 +9,7 @@ pub enum Token {
     Colon,
     Semicolon,
     Dot,
+    Comma,
     Keyword(Keyword),
 }
 
@@ -89,6 +90,7 @@ impl LexState {
                 b':' => (Self::Start, Some(Token::Colon)),
                 b';' => (Self::Start, Some(Token::Semicolon)),
                 b'.' => (Self::Start, Some(Token::Dot)),
+                b',' => (Self::Start, Some(Token::Comma)),
                 _ => (Self::Start, None),
             },
             Self::Pending(d) => {
