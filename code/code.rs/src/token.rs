@@ -26,7 +26,7 @@ pub enum Literal {
 }
 
 #[derive(Debug, Clone, PartialEq)]
-struct StringLiteral(Vec<u8>);
+pub struct StringLiteral(Vec<u8>);
 
 pub struct Lexer<I> {
     chars: I,
