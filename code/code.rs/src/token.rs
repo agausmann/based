@@ -1,3 +1,5 @@
+use std::iter::Peekable;
+
 #[derive(Debug, Clone, PartialEq)]
 pub enum Token {
     Word(Word),
@@ -59,6 +61,8 @@ where
         }
     }
 }
+
+pub type Tokens = Peekable<std::vec::IntoIter<Token>>;
 
 #[derive(Debug, PartialEq)]
 enum LexState {
